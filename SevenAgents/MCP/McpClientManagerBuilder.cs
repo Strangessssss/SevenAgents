@@ -29,7 +29,7 @@ public class McpClientManagerBuilder
             {
                 Command = command,
                 Arguments = args?.ToList(),
-                EnvironmentVariables = env?.ToDictionary(kv => kv.Key, kv => kv.Value)
+                EnvironmentVariables = env?.ToDictionary(kv => kv.Key, kv => kv.Value)!
             }),
             new McpClientOptions { ClientInfo = new() { Name = name ?? command, Version = "1.0.0" } }
         ));
